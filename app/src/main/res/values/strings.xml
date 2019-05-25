@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">projeto</string>
+    <string name="what_your_problem">Qual o seu problema?</string>
+    <string name="where_you">Onde você está?</string>
+    <string name="send">Enviar</string>
+    <string name="login">Login</string>
+    <string name="password">Senha</string>
+    <string name="user">Usuário</string>
+    <string name="validate_error">Preencha os campos corretamente</string>
+</resources>
