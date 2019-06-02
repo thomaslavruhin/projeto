@@ -15,25 +15,25 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        supportActionBar?.title = "Login"
+        supportActionBar?.title = getString(R.string.login)
 
         button.setOnClickListener {
             if (et_user.text.toString().length < LENGTH_MIN) {
-                makeText("Digite um usuário válido")
+                makeText(getString(R.string.input_the_valid_user))
                 return@setOnClickListener
             }
 
             if (et_password.text.toString().length < LENGTH_MIN) {
-                makeText("Digite uma senha válida")
+                makeText(getString(R.string.input_password_valid))
                 return@setOnClickListener
             }
 
             val clazz =
                 when {
                     et_user.text.toString().equals("Professor", true) -> TeacherActivity::class.java
-                    et_user.text.toString().equals("Suporte", true) -> TeacherActivity::class.java
+                    et_user.text.toString().equals("Suporte", true) -> SupportActivity::class.java
                     else -> {
-                        makeText("Usuário não cadastrado")
+                        makeText(getString(R.string.user_not_registered))
                         null
                     }
                 }
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
                 if (passwordIsValid)
                     startActivity(Intent(this, it))
                 else
-                    makeText("Senha incorreta")
+                    makeText(getString(R.string.invalid_password))
             }
 
             return@setOnClickListener

@@ -7,4 +7,9 @@
     <string name="password">Senha</string>
     <string name="user">Usuário</string>
     <string name="validate_error">Preencha os campos corretamente</string>
+    <string name="user_not_registered">Usuário não cadastrado</string>
+    <string name="invalid_password">Senha incorreta</string>
+    <string name="input_the_valid_user">Digite um usuário válido</string>
+    <string name="input_password_valid">Digite uma senha válida</string>
+    <string name="not_exists_problems_yet">Ainda não existem suportes</string>
 </resources>

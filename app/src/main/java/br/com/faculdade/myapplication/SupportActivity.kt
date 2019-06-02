@@ -1,7 +1,9 @@
 package br.com.faculdade.myapplication
 
 import android.os.Bundle
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.faculdade.myapplication.database.DataBaseFactory
 import br.com.faculdade.myapplication.extesion.makeText
@@ -15,6 +17,7 @@ class SupportActivity : AppCompatActivity() {
         setContentView(R.layout.activity_support)
 
         recyclerview.layoutManager = LinearLayoutManager(this)
+        recyclerview.addItemDecoration(DividerItemDecoration(this, LinearLayout.VERTICAL))
         initAdapter()
 
     }
@@ -30,7 +33,7 @@ class SupportActivity : AppCompatActivity() {
             runOnUiThread {
 
                 if(fetchSupport.isEmpty()) {
-                    makeText("Ainda não existem suportes")
+                    makeText(getString(R.string.not_exists_problems_yet))
                 } else {
                     recyclerview.adapter = SupportAdapter(fetchSupport)
                 }
